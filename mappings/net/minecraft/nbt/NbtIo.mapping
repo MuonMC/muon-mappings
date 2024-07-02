@@ -1,10 +1,17 @@
 CLASS net/minecraft/unmapped/C_plrkqquc net/minecraft/nbt/NbtIo
+	FIELD f_zwmbytoi openOptions [Ljava/nio/file/OpenOption;
 	METHOD m_hsrlntfm write (Lnet/minecraft/unmapped/C_oivssbvb;Ljava/io/DataOutput;)V
 		ARG 0 nbt
 		ARG 1 output
+	METHOD m_kfuaemox writeToFile (Lnet/minecraft/unmapped/C_hhlwcnih;Ljava/nio/file/Path;)V
+		ARG 1 filePath
 	METHOD m_kuwxotkv write (Lnet/minecraft/unmapped/C_hhlwcnih;Ljava/io/DataOutput;)V
 		ARG 0 compound
 		ARG 1 output
+	METHOD m_lvarbmqk (Ljava/io/DataInput;Lnet/minecraft/unmapped/C_fozrrtcx;)Lnet/minecraft/unmapped/C_oivssbvb;
+		ARG 0 input
+	METHOD m_lwpolkuf readFromFile (Ljava/nio/file/Path;)Lnet/minecraft/unmapped/C_hhlwcnih;
+		ARG 0 filePath
 	METHOD m_nvtwzikn writeCompressed (Lnet/minecraft/unmapped/C_hhlwcnih;Ljava/nio/file/Path;)V
 	METHOD m_pzvkgxhc read (Ljava/io/DataInput;Lnet/minecraft/unmapped/C_fozrrtcx;)Lnet/minecraft/unmapped/C_hhlwcnih;
 		ARG 0 input
@@ -15,5 +22,8 @@ CLASS net/minecraft/unmapped/C_plrkqquc net/minecraft/nbt/NbtIo
 	METHOD m_rqnlssft read (Ljava/io/DataInput;Lnet/minecraft/unmapped/C_avcaqucb;Lnet/minecraft/unmapped/C_fozrrtcx;)V
 		ARG 0 input
 		ARG 1 visitor
+	METHOD m_yicwdxov (Lnet/minecraft/unmapped/C_oivssbvb;Ljava/io/DataOutput;)V
+		ARG 1 output
 	METHOD m_zjsgjdoa read (Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_hhlwcnih;
 		ARG 0 input
+	CLASS C_wbbhdkdn NbtStringOutput

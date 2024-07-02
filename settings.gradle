@@ -17,7 +17,7 @@ if (!JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_21)) {
 	throw new UnsupportedOperationException("Quilt Mappings's buildscript requires Java 21 or higher. (current version: " + JavaVersion.current() + ")")
 }
 
-rootProject.name = "quilt-mappings"
+rootProject.name = "muon-mappings"
 
 var localSettings = file("local.settings.gradle")
 if (localSettings.exists()) {

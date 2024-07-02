@@ -1,0 +1,59 @@
+CLASS net/minecraft/unmapped/C_zbvyjshu net/minecraft/world/DimensionTransition
+	COMMENT The information required for teleporting (AKA transitioning) an entity to another dimension.
+	COMMENT
+	COMMENT This also includes relevant world events that occur post-transition.
+	COMMENT
+	COMMENT @see net.minecraft.world.WorldEvents
+	FIELD f_eibgqwyh pitch F
+	FIELD f_fbtpbgjw ADD_PORTAL_TICKET Lnet/minecraft/unmapped/C_zbvyjshu$C_pytyshdn;
+	FIELD f_hirigbuo velocity Lnet/minecraft/unmapped/C_vgpupfxx;
+	FIELD f_hmhvezqn targetWorld Lnet/minecraft/unmapped/C_bdwnwhiu;
+	FIELD f_jgwyllbi NONE Lnet/minecraft/unmapped/C_zbvyjshu$C_pytyshdn;
+	FIELD f_kidpbkzf TRAVEL_THROUGH_PORTAL Lnet/minecraft/unmapped/C_zbvyjshu$C_pytyshdn;
+	FIELD f_kjjfhicy yaw F
+	FIELD f_nkoalngi postTeleportEvent Lnet/minecraft/unmapped/C_zbvyjshu$C_pytyshdn;
+	FIELD f_wbzvfsuy position Lnet/minecraft/unmapped/C_vgpupfxx;
+	METHOD <init> (Lnet/minecraft/unmapped/C_bdwnwhiu;Lnet/minecraft/unmapped/C_astfners;Lnet/minecraft/unmapped/C_zbvyjshu$C_pytyshdn;)V
+		ARG 1 targetWorld
+		ARG 2 entity
+		ARG 3 postTeleportEvent
+	METHOD <init> (Lnet/minecraft/unmapped/C_bdwnwhiu;Lnet/minecraft/unmapped/C_vgpupfxx;Lnet/minecraft/unmapped/C_vgpupfxx;FFLnet/minecraft/unmapped/C_zbvyjshu$C_pytyshdn;)V
+		ARG 1 targetWorld
+		ARG 2 position
+		ARG 3 velocity
+		ARG 4 yaw
+		ARG 5 pitch
+		ARG 6 postTeleportEvent
+	METHOD m_ausrdxvr getPosition ()Lnet/minecraft/unmapped/C_vgpupfxx;
+	METHOD m_byrsnaen getPitch ()F
+	METHOD m_ciosvisu travelThroughPortal (Lnet/minecraft/unmapped/C_astfners;)V
+		ARG 0 entity
+	METHOD m_hqfwhiqr isMissingRespawnBlock ()Z
+	METHOD m_jnzislel getYaw ()F
+	METHOD m_kfblgmun atSpawnpoint (Lnet/minecraft/unmapped/C_bdwnwhiu;Lnet/minecraft/unmapped/C_astfners;Lnet/minecraft/unmapped/C_zbvyjshu$C_pytyshdn;)Lnet/minecraft/unmapped/C_zbvyjshu;
+		COMMENT Creates a new {@link net.minecraft.world.DimensionTransition} at the entity's calculated spawnpoint without conserving momentum or rotation.
+		COMMENT
+		COMMENT That is, the entity is stationary, has no rotation, and is located at the target world's spawnpoint upon transition.
+		COMMENT
+		COMMENT @return the entity with default values at the calculated spawnpoint.
+		ARG 0 targetWorld
+		ARG 1 entity
+		ARG 2 postTeleportEvent
+	METHOD m_qavntlje (Lnet/minecraft/unmapped/C_astfners;)V
+		ARG 0 entity
+	METHOD m_tmiapkfg addPortalTicket (Lnet/minecraft/unmapped/C_astfners;)V
+		ARG 0 entity
+	METHOD m_uahwixgh getTargetWorld ()Lnet/minecraft/unmapped/C_bdwnwhiu;
+	METHOD m_uvdwnbwb getPostTeleportEvent ()Lnet/minecraft/unmapped/C_zbvyjshu$C_pytyshdn;
+	METHOD m_vxzgepsf calculateTargetSpawnpoint (Lnet/minecraft/unmapped/C_bdwnwhiu;Lnet/minecraft/unmapped/C_astfners;)Lnet/minecraft/unmapped/C_vgpupfxx;
+		ARG 0 targetWorld
+		ARG 1 entity
+	METHOD m_zyigdydc getVelocity ()Lnet/minecraft/unmapped/C_vgpupfxx;
+	CLASS C_pytyshdn PostTeleportEvent
+		COMMENT The type of event to trigger after the {@link net.minecraft.world.DimensionTransition} has finished.
+		METHOD m_dnvdmgtl (Lnet/minecraft/unmapped/C_zbvyjshu$C_pytyshdn;Lnet/minecraft/unmapped/C_astfners;)V
+			ARG 2 entity
+		METHOD onTransition onTransition (Lnet/minecraft/unmapped/C_astfners;)V
+			ARG 1 entity
+		METHOD then then (Lnet/minecraft/unmapped/C_zbvyjshu$C_pytyshdn;)Lnet/minecraft/unmapped/C_zbvyjshu$C_pytyshdn;
+			ARG 1 callback

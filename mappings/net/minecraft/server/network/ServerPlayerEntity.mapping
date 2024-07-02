@@ -128,6 +128,9 @@ CLASS net/minecraft/unmapped/C_mxrobsgg net/minecraft/server/network/ServerPlaye
 		ARG 1 overlay
 	METHOD m_itdwcvgj worldChanged (Lnet/minecraft/unmapped/C_bdwnwhiu;)V
 		ARG 1 origin
+	METHOD m_jpjsvuqt (ZLnet/minecraft/unmapped/C_zbvyjshu$C_pytyshdn;)Lnet/minecraft/unmapped/C_zbvyjshu;
+		ARG 1 alive
+		ARG 2 postDimensionTransition
 	METHOD m_juidebgy tickFallStartPos ()V
 	METHOD m_jzshaolk teleport (Lnet/minecraft/unmapped/C_bdwnwhiu;DDDFF)V
 		ARG 1 targetWorld

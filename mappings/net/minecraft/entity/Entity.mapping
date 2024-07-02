@@ -361,6 +361,8 @@ CLASS net/minecraft/unmapped/C_astfners net/minecraft/entity/Entity
 	METHOD m_gxfczhkq getLeashOffset ()Lnet/minecraft/unmapped/C_vgpupfxx;
 	METHOD m_gxhbysyl isInFluid ()Z
 	METHOD m_gxhwoqaa getTeamColorValue ()I
+	METHOD m_gykcjypz addPortalTicket (Lnet/minecraft/unmapped/C_hynzadkk;)V
+		COMMENT Used by a nether portal to load chunks in the other dimension.
 	METHOD m_hehkhdfc isFrozen ()Z
 	METHOD m_hhmmivsh tryTickInVoid ()V
 	METHOD m_hhwoykag calculateNextStepSoundDistance ()F
@@ -445,6 +447,8 @@ CLASS net/minecraft/unmapped/C_astfners net/minecraft/entity/Entity
 		ARG 1 yaw
 	METHOD m_jlyguhnu setInvulnerable (Z)V
 		ARG 1 invulnerable
+	METHOD m_jntxmsea refreshPositionAndAngles (Lnet/minecraft/unmapped/C_vgpupfxx;FF)V
+		ARG 1 position
 	METHOD m_jnzyorkg getLerpTargetYaw ()F
 	METHOD m_jofogjft getRegistryManager ()Lnet/minecraft/unmapped/C_wqxmvzdq;
 	METHOD m_jplnglbd distanceTo (Lnet/minecraft/unmapped/C_astfners;)F
@@ -793,6 +797,7 @@ CLASS net/minecraft/unmapped/C_astfners net/minecraft/entity/Entity
 		COMMENT Note all entities except server player entities are completely recreated at the destination.
 		COMMENT
 		COMMENT @return the entity in the other world
+		ARG 1 transition
 	METHOD m_vbxcqznf adjustSingleAxisMovementForCollisions (Lnet/minecraft/unmapped/C_astfners;Lnet/minecraft/unmapped/C_vgpupfxx;Lnet/minecraft/unmapped/C_hbcjzgoe;Lnet/minecraft/unmapped/C_cdctfzbn;Ljava/util/List;)Lnet/minecraft/unmapped/C_vgpupfxx;
 		ARG 0 entity
 		ARG 1 movement
@@ -808,6 +813,7 @@ CLASS net/minecraft/unmapped/C_astfners net/minecraft/entity/Entity
 	METHOD m_vddvkdnu saveNbt (Lnet/minecraft/unmapped/C_hhlwcnih;)Z
 		ARG 1 nbt
 	METHOD m_vewkkvlv isFireImmune ()Z
+	METHOD m_vfbpgxfo calculateSpawnpoint (Lnet/minecraft/unmapped/C_bdwnwhiu;Lnet/minecraft/unmapped/C_hynzadkk;)Lnet/minecraft/unmapped/C_hynzadkk;
 	METHOD m_vfobpjve getParticleX (D)D
 		ARG 1 widthScale
 	METHOD m_vhqflgrn refreshPositionAndAngles (DDDFF)V
