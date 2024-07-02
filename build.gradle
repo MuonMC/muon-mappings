@@ -453,7 +453,7 @@ check.dependsOn mappingLint
 publishing {
 	publications {
 		maven(MavenPublication) {
-			groupId 'org.quiltmc'
+			groupId 'org.muonmc'
 			artifactId Constants.MAPPINGS_NAME
 			version Constants.MAPPINGS_VERSION
 

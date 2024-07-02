@@ -3,7 +3,7 @@ package quilt.internal;
 public class Constants {
     public static final String MINECRAFT_VERSION = "1.21";
 
-    public static final String MAPPINGS_NAME = "quilt-mappings";
+    public static final String MAPPINGS_NAME = "muon-mappings";
 
     public static final String PER_VERSION_MAPPINGS_NAME = "hashed";
 
