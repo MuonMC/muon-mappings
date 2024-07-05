@@ -813,7 +813,7 @@ CLASS net/minecraft/unmapped/C_astfners net/minecraft/entity/Entity
 	METHOD m_vddvkdnu saveNbt (Lnet/minecraft/unmapped/C_hhlwcnih;)Z
 		ARG 1 nbt
 	METHOD m_vewkkvlv isFireImmune ()Z
-	METHOD m_vfbpgxfo calculateSpawnpoint (Lnet/minecraft/unmapped/C_bdwnwhiu;Lnet/minecraft/unmapped/C_hynzadkk;)Lnet/minecraft/unmapped/C_hynzadkk;
+	METHOD m_vfbpgxfo calculateSpawnPoint (Lnet/minecraft/unmapped/C_bdwnwhiu;Lnet/minecraft/unmapped/C_hynzadkk;)Lnet/minecraft/unmapped/C_hynzadkk;
 	METHOD m_vfobpjve getParticleX (D)D
 		ARG 1 widthScale
 	METHOD m_vhqflgrn refreshPositionAndAngles (DDDFF)V

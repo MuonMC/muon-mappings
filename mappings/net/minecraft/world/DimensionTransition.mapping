@@ -30,12 +30,12 @@ CLASS net/minecraft/unmapped/C_zbvyjshu net/minecraft/world/DimensionTransition
 		ARG 0 entity
 	METHOD m_hqfwhiqr isMissingRespawnBlock ()Z
 	METHOD m_jnzislel getYaw ()F
-	METHOD m_kfblgmun atSpawnpoint (Lnet/minecraft/unmapped/C_bdwnwhiu;Lnet/minecraft/unmapped/C_astfners;Lnet/minecraft/unmapped/C_zbvyjshu$C_pytyshdn;)Lnet/minecraft/unmapped/C_zbvyjshu;
-		COMMENT Creates a new {@link net.minecraft.world.DimensionTransition} at the entity's calculated spawnpoint without conserving momentum or rotation.
+	METHOD m_kfblgmun atSpawnPoint (Lnet/minecraft/unmapped/C_bdwnwhiu;Lnet/minecraft/unmapped/C_astfners;Lnet/minecraft/unmapped/C_zbvyjshu$C_pytyshdn;)Lnet/minecraft/unmapped/C_zbvyjshu;
+		COMMENT Creates a new {@link net.minecraft.world.DimensionTransition} at the entity's calculated spawn point without conserving momentum or rotation.
 		COMMENT
-		COMMENT That is, the entity is stationary, has no rotation, and is located at the target world's spawnpoint upon transition.
+		COMMENT That is, the entity is stationary, has no rotation, and is located at the target world's spawn point upon transition.
 		COMMENT
-		COMMENT @return the entity with default values at the calculated spawnpoint.
+		COMMENT @return the entity with default values at the calculated spawn point.
 		ARG 0 targetWorld
 		ARG 1 entity
 		ARG 2 postTeleportEvent
@@ -45,7 +45,7 @@ CLASS net/minecraft/unmapped/C_zbvyjshu net/minecraft/world/DimensionTransition
 		ARG 0 entity
 	METHOD m_uahwixgh getTargetWorld ()Lnet/minecraft/unmapped/C_bdwnwhiu;
 	METHOD m_uvdwnbwb getPostTeleportEvent ()Lnet/minecraft/unmapped/C_zbvyjshu$C_pytyshdn;
-	METHOD m_vxzgepsf calculateTargetSpawnpoint (Lnet/minecraft/unmapped/C_bdwnwhiu;Lnet/minecraft/unmapped/C_astfners;)Lnet/minecraft/unmapped/C_vgpupfxx;
+	METHOD m_vxzgepsf calculateTargetSpawnPoint (Lnet/minecraft/unmapped/C_bdwnwhiu;Lnet/minecraft/unmapped/C_astfners;)Lnet/minecraft/unmapped/C_vgpupfxx;
 		ARG 0 targetWorld
 		ARG 1 entity
 	METHOD m_zyigdydc getVelocity ()Lnet/minecraft/unmapped/C_vgpupfxx;

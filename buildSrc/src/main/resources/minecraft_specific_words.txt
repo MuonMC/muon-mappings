@@ -473,6 +473,9 @@ vanishable
 waterloggable
 taggable
 
+// -ing
+transitioning
+
 // networking
 decryptor
 encryptor

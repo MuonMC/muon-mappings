@@ -1,5 +1,5 @@
 CLASS net/minecraft/unmapped/C_plrkqquc net/minecraft/nbt/NbtIo
-	FIELD f_zwmbytoi openOptions [Ljava/nio/file/OpenOption;
+	FIELD f_zwmbytoi WRITE_TO_FILE_OPEN_OPTIONS [Ljava/nio/file/OpenOption;
 	METHOD m_hsrlntfm write (Lnet/minecraft/unmapped/C_oivssbvb;Ljava/io/DataOutput;)V
 		ARG 0 nbt
 		ARG 1 output
