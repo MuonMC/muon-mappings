@@ -17,9 +17,9 @@ grouping classes together in an IDE's tree view, reading and writing code is don
 
 ## Spelling
 
-Use American English for consistency throughout Quilt Mappings and with known Mojang names.
+Use American English for consistency throughout Muon Mappings and with known Mojang names.
 
-If there are two acceptable spellings of the same word, first check if one is already being used in Quilt Mappings or by Mojang, and if
+If there are two acceptable spellings of the same word, first check if one is already being used in Muon Mappings or by Mojang, and if
 not, use the most common spelling.
 
 ## Conciseness
@@ -36,7 +36,7 @@ longer and more descriptive.
 
 ## Abbreviations
 
-Avoid abbreviations unless it's a common one everyone knows and other Quilt Mappings names involving the same word use its abbreviated
+Avoid abbreviations unless it's a common one everyone knows and other Muon Mappings names involving the same word use its abbreviated
 form. Full names are easier to read quickly and remember ("Which words were abbreviated?") and they often don't take more
 time to type thanks to IDE autocompletion. Common abbreviations you should use are:
 
@@ -65,7 +65,7 @@ as used in `feature_flag`.
 ## Consistency
 
 Consistency is important as it makes code more readable and names easier to memorize. When possible, use terms that are present
-in other Quilt Mappings names, in libraries used by Minecraft, or in vanilla strings. The rest of this section lists common names and
+in other Muon Mappings names, in libraries used by Minecraft, or in vanilla strings. The rest of this section lists common names and
 name patterns you should use.
 
 ### Ticks and updates
@@ -149,18 +149,18 @@ Javadoc will take the first sentence, ended by the first `.`, as a brief descrip
 
 ### Packages
 
-Since enigma format does not support `package-info.java` file creation, Quilt Mappings keeps these files in `src/packageDocs/java` to supply javadocs for packages. Their only purpose is to host Javadoc for Quilt Mappings packages, which are currently not exported to mappings, and their Javadocs should follow the conventions just like enigma-based Javadocs.
+Since enigma format does not support `package-info.java` file creation, Muon Mappings keeps these files in `src/packageDocs/java` to supply javadocs for packages. Their only purpose is to host Javadoc for Muon Mappings packages, which are currently not exported to mappings, and their Javadocs should follow the conventions just like enigma-based Javadocs.
 
 ### Tooling
 
-Quilt-hosted Javadocs are generated using [JDK 21 Standard Doclet](https://docs.oracle.com/en/java/javase/21/docs/specs/javadoc/doc-comment-spec.html) and can use any feature it supports. For example, it has a [list of supported tags](https://docs.oracle.com/en/java/javase/21/docs/specs/javadoc/doc-comment-spec.html#where-tags-can-be-used). You can personally build the documentation with a newer Java version. See [the 'Checking Javadoc' section](#checking-javadoc) for how to build the documentation locally.
+Muon-hosted Javadocs are generated using [JDK 21 Standard Doclet](https://docs.oracle.com/en/java/javase/21/docs/specs/javadoc/doc-comment-spec.html) and can use any feature it supports. For example, it has a [list of supported tags](https://docs.oracle.com/en/java/javase/21/docs/specs/javadoc/doc-comment-spec.html#where-tags-can-be-used). You can personally build the documentation with a newer Java version. See [the 'Checking Javadoc' section](#checking-javadoc) for how to build the documentation locally.
 
 ### Custom tags
 
 A few additional block tags are supported:
 
  - `@apiNote`: API Notes. A few comments for users of the documented API.
- - `@implSpec`: Implementation Specification. Tells how this method is implemented; usually avoided as Quilt Mappings doesn't define implementations.
+ - `@implSpec`: Implementation Specification. Tells how this method is implemented; usually avoided as Muon Mappings doesn't define implementations.
  - `@implNote`: Implementation Notes. A few comments on the implementation.
 
 Feel free to use these tags and write under these sections.
@@ -179,7 +179,7 @@ A class is assumed to be imported in the following scenarios:
 
 If it does not fulfill one of these scenarios, use the [full binary name](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/ClassLoader.html#binary-name), such as `com.google.common.collect.Lists` rather than simply `Lists`. Unlike class naming in enigma, do not use `/` to separate packages; use `.` instead.
 
-Use Quilt Mappings when referencing Minecraft members, such as `net.minecraft.server.world.ThreadedChunkManager` rather than `net.minecraft.unmapped.C_ccazprxg`. The Javadoc task will warn if some links no longer work after a rename.
+Use Muon Mappings when referencing Minecraft members, such as `net.minecraft.server.world.ThreadedChunkManager` rather than `net.minecraft.unmapped.C_ccazprxg`. The Javadoc task will warn if some links no longer work after a rename.
 
 <details>
 <summary>

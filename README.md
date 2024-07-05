@@ -1,41 +1,43 @@
-# Quilt Mappings
+# Muon Mappings
 
-Quilt Mappings is a set of open, accurate, and easy-to-understand Minecraft mappings
-under the Creative Commons Zero license. Quilt Mappings seeks to provide the best of
+Muon Mappings is a set of open, accurate, and easy-to-understand Minecraft mappings
+under the Creative Commons Zero license. Muon Mappings seeks to provide the best of
 both worlds in terms of mapping quality: the accuracy and completeness of Mojang's
 official mappings, and the simplicity and set-in-stone conventions of its basis, the
 [Yarn](https://github.com/FabricMC/yarn) project.
 
-Quilt Mappings exists to provide a stable set of mappings for everyone to contribute
+Muon Mappings exists to provide a stable set of mappings for everyone to contribute
 and improve upon. We provide mappings for all versions of Minecraft from 1.17 onwards.
 To see what version is currently being targeted for updates, check the current Git branch's name.
 
-## Using QM
+## Using MM
 
-To use Quilt Mappings in your mod, you can use either [quilt-loom](https://github.com/QuiltMC/quilt-loom)
+To use Muon Mappings in your mod, you can use either [quilt-loom](https://github.com/QuiltMC/quilt-loom)
 for Quilt mods or use our Intermediary publication on [Fabric's loom](https://github.com/FabricMC/fabric-loom)
 for Fabric mods. We recommend cloning the [Quilt Template Mod](https://github.com/QuiltMC/quilt-template-mod)
-to start a new mod with QM, and you can also add this block to your `build.gradle` inside the `dependencies` block:
+to start a new mod with MM, and you can also add this block to your `build.gradle` inside the `dependencies` block:
 
 ```groovy
-mappings("org.quiltmc:quilt-mappings:[version]:intermediary-v2")
+mappings("org.muonmc:muon-mappings:[version]:intermediary-v2")
 ```
 
 Note that on `fabric-loom`, you'll have to add the following to your `repositories` block as well, to tell gradle
 where to find the QM publication:
 
 ```groovy
-maven { url = "https://maven.quiltmc.org/repository/release/" }
+maven { url = "https://maven.muonmc.org/releases/" }
 ```
 
 QM versions are named after the Minecraft version they target, followed by `+build.x`,
 with `x` being a number that increments with each new build of QM for that Minecraft version.
-For example, `1.18.2+build.1` is the first build of QM for Minecraft `1.18.2`. You can see additional
-information and see what the latest QM build for each Minecraft version is with the [quilt import tool][quilt-import-tool].
+For example, `1.18.2+build.1` is the first build of QM for Minecraft `1.18.2`. <!--You can see additional
+information and see what the latest MM build for each Minecraft version is with the [quilt import tool][quilt-import-tool].-->
+<!--
 (For automatic queries, try the [versions API][quilt-meta-api-mappings-version-by-game-version].)
 
   [quilt-import-tool]: https://quiltmc.org/en/usage/latest-versions/
   [quilt-meta-api-mappings-version-by-game-version]: https://meta.quiltmc.org/#/v3/get_v3_versions_quilt_mappings__game_version_
+-->
 
 
 
@@ -68,10 +70,10 @@ Same as above, but unpicks the constants and launches Enigma with them. Can be a
 
 
 ### `build`
-Build a GZip'd archive containing a tiny mapping between official (obfuscated), [hashed-mojmap](https://github.com/QuiltMC/mappings-hasher), and Quilt Mappings names ("named") and packages enigma mappings into a zip archive.
+Build a GZip'd archive containing a tiny mapping between official (obfuscated), [hashed-mojmap](https://github.com/QuiltMC/mappings-hasher), and Muon Mappings names ("named") and packages enigma mappings into a zip archive.
 
 ### `mapNamedJar`
-Builds a deobfuscated jar with Quilt mappings and automapped fields (enums, etc.). Unmapped names will be filled with [hashed-mojmap](https://github.com/QuiltMC/mappings-hasher) names.
+Builds a deobfuscated jar with Muon mappings and automapped fields (enums, etc.). Unmapped names will be filled with [hashed-mojmap](https://github.com/QuiltMC/mappings-hasher) names.
 
 ### `decompileVineflower`
 Decompile the mapped source code. **Note:** This is not designed to be recompiled.
