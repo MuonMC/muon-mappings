@@ -2,7 +2,7 @@ name: Publish
 on: [push]
 jobs:
   publish:
-    if: ${{ github.repository_owner == 'QuiltMC' }}
+    if: ${{ github.repository_owner == 'MuonMC' }}
     runs-on: ubuntu-latest
     container:
       image: eclipse-temurin:21
@@ -21,7 +21,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Generate the build number based on tags to allow per branch build numbers, not something github provides by default.
+      # Generate the build number based on tags to allow per branch build numbers, not something GitHub provides by default.
       - name: Generate build number
         id: buildnumber
         uses: onyxmueller/build-tag-number@v1
@@ -37,9 +37,9 @@ jobs:
           SNAPSHOTS_USERNAME: ${{ secrets.SNAPSHOTS_USERNAME }}
           SNAPSHOTS_PASSWORD: ${{ secrets.SNAPSHOTS_PASSWORD }}
           BRANCH_NAME: ${{ github.ref }}
-      - name: Update Quilt Meta
-        uses: quiltmc/update-quilt-meta@main
-        with:
-          b2-key-id: ${{ secrets.META_B2_KEY_ID }}
-          b2-key: ${{ secrets.META_B2_KEY }}
-          cf-key: ${{ secrets.META_CF_KEY }}
+#      - name: Update Quilt Meta
+#        uses: quiltmc/update-quilt-meta@main
+#        with:
+#          b2-key-id: ${{ secrets.META_B2_KEY_ID }}
+#          b2-key: ${{ secrets.META_B2_KEY }}
+#          cf-key: ${{ secrets.META_CF_KEY }}
